@@ -1,0 +1,19 @@
+{
+  "name": "website-factory-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build --env production",
+    "preview": "npx http-server dist -p 3333 -c-1"
+  },
+  "dependencies": {
+    "sanity": "^3.46.0",
+    "@sanity/vision": "^3.46.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.4.0"
+  }
+}
