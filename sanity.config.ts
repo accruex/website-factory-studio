@@ -1,17 +1,21 @@
-import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'      // <-- add this
-import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './schemas'
+import {defineConfig} from 'sanity'
+import {deskTool} from 'sanity/desk'      // content editor
+import {visionTool} from '@sanity/vision' // GROQ playground
+import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'website-factory-studio',
   title: 'Website Factory Studio',
-  projectId: 'YOUR_REAL_PROJECT_ID',   // keep your correct id
+
+  // 👇 put the real projectId here — copy it from the Vision URL host,
+  // e.g. https://19onuo8u.api.sanity.io/...  -> projectId is 19onuo8u
+  projectId: '19onuo8u',
   dataset: 'production',
+
   basePath: '/',
   plugins: [
-    deskTool(),                       // <-- add this
+    deskTool(),
     visionTool(),
   ],
-  schema: { types: schemaTypes },
+  schema: {types: schemaTypes},
 })
